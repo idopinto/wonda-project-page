@@ -34,7 +34,6 @@ To edit the websites contents edit the `index.html` file. It contains different 
 - Modern, clean design with better mobile support
 - Improved SEO with proper meta tags and structured data
 - Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
 - Copy button for BibTeX citations
 - Better accessibility
 

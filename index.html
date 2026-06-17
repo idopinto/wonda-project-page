@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title"
+    content="Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs - Ido Pinto, Yizhak Yisrael Elboher, Haoze Wu, Nina Narodytska, Guy Katz">
+  <meta name="description"
+    content="Wonda curates verifier-generated invariants to fine-tune SLMs for program verification, matching frontier LLMs at 4B–14B scale without test-time compute overhead.">
+  <meta name="keywords"
+    content="program verification, loop invariants, small language models, fine-tuning, data curation, Wonda, InvBench, formal methods">
+  <meta name="author" content="Ido Pinto, Yizhak Yisrael Elboher, Haoze Wu, Nina Narodytska, Guy Katz">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="Katz Lab, Hebrew University of Jerusalem">
+  <meta property="og:title"
+    content="Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs">
+  <meta property="og:description"
+    content="Wonda curates verifier-generated invariants to fine-tune SLMs for program verification, matching frontier LLMs at 4B–14B scale without test-time compute overhead.">
+  <meta property="og:url" content="https://idopinto.github.io/wonda-project-page/">
+  <meta property="og:image" content="https://idopinto.github.io/wonda-project-page/static/images/figures/figure_5.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt"
+    content="Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs - Research Preview">
+  <meta property="article:published_time" content="2026-07-01T00:00:00.000Z">
+  <meta property="article:author" content="Ido Pinto">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="program verification">
+  <meta property="article:tag" content="loop invariants">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title"
+    content="Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs">
+  <meta name="twitter:description"
+    content="Wonda curates verifier-generated invariants to fine-tune SLMs for program verification, matching frontier LLMs at 4B–14B scale without test-time compute overhead.">
+  <meta name="twitter:image" content="https://idopinto.github.io/wonda-project-page/static/images/figures/figure_5.png">
+  <meta name="twitter:image:alt"
+    content="Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title"
+    content="Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs">
+  <meta name="citation_author" content="Pinto, Ido">
+  <meta name="citation_author" content="Elboher, Yizhak Yisrael">
+  <meta name="citation_author" content="Wu, Haoze">
+  <meta name="citation_author" content="Narodytska, Nina">
+  <meta name="citation_author" content="Katz, Guy">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="International Conference on Machine Learning (ICML)">
+  <meta name="citation_arxiv_id" content="2603.15510">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2603.15510.pdf">
+  <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2603.15510">
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,34 +73,33 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
+  <title>Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs | Ido Pinto,
+    Yizhak Yisrael Elboher, Haoze Wu, Nina Narodytska, Guy Katz</title>
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -108,76 +107,89 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs",
+    "description": "Wonda curates verifier-generated invariants to fine-tune SLMs for program verification, matching frontier LLMs at 4B–14B scale without test-time compute overhead.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
+        "name": "Ido Pinto",
+        "url": "https://idopinto.github.io/ido-pinto/",
+        "affiliation": {"@type": "Organization", "name": "Hebrew University of Jerusalem"}
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
+        "name": "Yizhak Yisrael Elboher",
+        "affiliation": {"@type": "Organization", "name": "Hebrew University of Jerusalem"}
+      },
+      {
+        "@type": "Person",
+        "name": "Haoze Wu",
+        "affiliation": [
+          {"@type": "Organization", "name": "Amherst College"},
+          {"@type": "Organization", "name": "VMware Research by Broadcom"}
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Nina Narodytska",
+        "affiliation": {"@type": "Organization", "name": "VMware Research by Broadcom"}
+      },
+      {
+        "@type": "Person",
+        "name": "Guy Katz",
+        "affiliation": {"@type": "Organization", "name": "Hebrew University of Jerusalem"}
       }
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2026-07-01",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "International Conference on Machine Learning (ICML)"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "url": "https://idopinto.github.io/wonda-project-page/",
+    "image": "https://idopinto.github.io/wonda-project-page/static/images/figures/figure_5.png",
+    "keywords": ["program verification", "loop invariants", "small language models", "fine-tuning", "Wonda"],
+    "abstract": "The synthesis of inductive loop invariants remains a critical bottleneck in automated program verification. While Large Language Models (LLMs) show promise in mitigating this issue, they often fail on complex programs, producing invariants that are invalid or computationally ineffective. Although fine-tuning is a natural strategy to address these limitations, obtaining high-quality training data remains an open challenge. We first formalize the properties required for a high-quality training invariant, and then present Wonda, a rigorous data curation pipeline that extracts such invariants from raw verifier output via AST-based normalization followed by LLM-driven semantic rewriting and augmentation with provable quality guarantees. Fine-tuning Small Language Models (SLMs) on Wonda-curated data yields consistent gains across the Qwen3, Llama-3.1, and Mistral families: the 4B and 8B Qwen3 models nearly double invariant correctness and double speedup rates, while Llama-3.1-8B triples both. On the challenging InvBench suite, the same 4B model outperforms an off-the-shelf model 20× its size and matches the end-to-end verification time of GPT-OSS-120B, while a 14B Qwen3 model matches that of the frontier model GPT-5.2, all without test-time compute overhead.",
+    "citation": "@inproceedings{pinto2026wonda, title={Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs}, author={Pinto, Ido and Elboher, Yizhak Yisrael and Wu, Haoze and Narodytska, Nina and Katz, Guy}, booktitle={International Conference on Machine Learning (ICML)}, year={2026}, url={https://arxiv.org/abs/2603.15510}}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://idopinto.github.io/wonda-project-page/"
     },
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Program verification"
       },
       {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@type": "Thing",
+        "name": "Loop invariant synthesis"
       }
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "name": "Katz Lab, Hebrew University of Jerusalem",
+    "url": "https://www.katz-lab.com/",
+    "logo": "https://idopinto.github.io/wonda-project-page/static/images/favicon.ico",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/idopinto/wonda"
     ]
   }
   </script>
 </head>
+
 <body>
 
 
@@ -186,335 +198,663 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <span class="publication-title-line">Not All Invariants Are Equal:</span>
+                <span class="publication-title-line">Curating Training Data to Accelerate Program Verification with
+                  SLMs</span>
+              </h1>
+              <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                  <a href="https://idopinto.github.io/ido-pinto/" target="_blank" rel="noopener">Ido
+                    Pinto</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://yizhakelboher9.wixsite.com/website" target="_blank" rel="noopener">Yizhak Yisrael
+                    Elboher</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://wu-haoze.github.io/" target="_blank" rel="noopener">Haoze Wu</a><sup>2,3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://narodytska.com/" target="_blank" rel="noopener">Nina Narodytska</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.katz-lab.com/" target="_blank" rel="noopener">Guy Katz</a><sup>1</sup>
+                </span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <div class="is-size-6 publication-authors affiliation-list">
+                <div><sup>1</sup>Hebrew University of Jerusalem, Israel</div>
+                <div><sup>2</sup>Amherst College, USA</div>
+                <div><sup>3</sup>VMware Research by Broadcom, USA</div>
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <div class="is-size-5 publication-authors">
+                <a href="https://icml.cc/virtual/2026/poster/62571" target="_blank" rel="noopener"
+                  class="publication-venue">ICML 2026</a>
+              </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2603.15510" target="_blank" rel="noopener"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="ai ai-arxiv"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>Paper</span>
                     </a>
                   </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <a href="https://github.com/idopinto/wonda" target="_blank" rel="noopener"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+
+                  <span class="link-block">
+                    <a href="https://huggingface.co/collections/idopinto/wonda-models" target="_blank" rel="noopener"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <img src="static/images/hf-logo.svg" alt="" class="hf-icon" width="18" height="18">
+                      </span>
+                      <span>Models</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://huggingface.co/collections/idopinto/wonda-datasets" target="_blank" rel="noopener"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <img src="static/images/hf-logo.svg" alt="" class="hf-icon" width="18" height="18">
+                      </span>
+                      <span>Datasets</span>
+                    </a>
+                  </span>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+    <!-- Visual hero + Wonda pipeline -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <h2 class="title is-3 has-text-centered pipeline-algorithms-title">Wonda Data Curation Pipeline</h2>
+          <p class="subtitle has-text-centered pipeline-algorithms-intro">
+            We introduce <strong>Wonda</strong>, a rigorous data curation pipeline that transforms raw verifier output
+            into high-quality training invariants for loop invariant generation task through AST normalization,
+            LLM-driven simplification, and formal
+            quality grading.
+          </p>
+          <figure class="publication-figure-centered pipeline-poster">
+            <img src="static/images/verifier_pipeline_poster.png"
+              alt="Wonda pipeline diagram: verification query, direct verification, AST normalization, LLM simplification, syntax validation, and V1/V2 correctness and sufficiency checks produce qualifying invariants."
+              loading="lazy" class="publication-figure-image pipeline-poster-img">
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- End visual hero + pipeline -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                The synthesis of inductive loop invariants remains a critical bottleneck in automated program
+                verification. While Large Language Models (LLMs) show promise in mitigating this issue, they often fail
+                on complex programs, producing invariants that are invalid or computationally ineffective. Although
+                fine-tuning is a natural strategy to address these limitations, obtaining high-quality training data
+                remains an open challenge. We first formalize the properties required for a high-quality training
+                invariant, and then present <strong>Wonda</strong>, a rigorous data curation pipeline that extracts such
+                invariants from raw verifier output via AST-based normalization followed by LLM-driven semantic
+                rewriting and augmentation with provable quality guarantees. Fine-tuning Small Language Models (SLMs) on
+                <strong>Wonda</strong>-curated data yields consistent gains across the Qwen3, Llama-3.1, and Mistral
+                families: the 4B and 8B Qwen3 models nearly double invariant correctness and double speedup rates, while
+                Llama-3.1-8B triples both. On the challenging InvBench suite, the same 4B model outperforms an
+                off-the-shelf model 20&times; its size and matches the end-to-end verification time of GPT-OSS-120B,
+                while a 14B Qwen3 model matches that of the frontier model GPT-5.2, all without test-time compute
+                overhead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Why raw verifier data fails -->
+    <section class="section hero is-small is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Why Not Raw Verifier Output?</h2>
+        <figure class="publication-figure-centered">
+          <img src="static/images/figures/figure_1.png"
+            alt="Example of a raw verbose invariant generated by UAutomizer: 3084 characters, 75 conjuncts, 11 disjuncts"
+            loading="lazy" class="publication-figure-image">
+        </figure>
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h3 class="subtitle has-text-centered">
+              UAutomizer-generated invariants are often correct but verbose, cluttered, and poor training targets.
+            </h3>
+            <div class="content has-text-justified">
+              <p>
+                Fine-tuning on invariants produced by symbolic verifiers such as UAutomizer is a natural way to
+                specialize language models for invariant synthesis. In practice, however, this strategy often fails on
+                hard benchmarks. Raw UAutomizer outputs tend to be syntactically noisy, verifier-specific, and
+                pedagogically
+                weak: they enumerate many disjuncts instead of exposing compact structure that a model can learn to
+                reproduce.
+              </p>
+              <p>
+                We argue that data quality, rather than model scale alone, is the key bottleneck. Wonda addresses this
+                by curating verifier output into training invariants that are correct, useful for verification, and
+                compact enough to serve as effective supervision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End why raw verifier data fails -->
+
+    <!-- Quality criteria -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 has-text-centered">What Makes a Good Training Invariant?</h2>
+            <div class="content has-text-justified">
+              <p>
+                We formalize four properties that a high-quality training invariant should satisfy:
+              </p>
+              <ul>
+                <li><strong>Non-degeneracy:</strong> exclude trivial formulas (<code>TRUE</code>, <code>FALSE</code>).
+                </li>
+                <li><strong>Correctness:</strong> the invariant holds at the loop location on all relevant executions.
+                </li>
+                <li><strong>Usefulness:</strong> using the invariant speeds up verification relative to the baseline
+                  verifier.</li>
+                <li><strong>Compactness:</strong> a succinct syntactic form that is easier for a model to learn and
+                  generalize from.</li>
+              </ul>
+              <p>
+                Wonda&rsquo;s grading function <em>G</em>&nbsp;&isin;&nbsp;{0,&nbsp;1,&nbsp;2,&nbsp;3} scores each
+                candidate using formal V<sub>1</sub> (correctness) and V<sub>2</sub> (sufficiency) checks. Only
+                candidates with <em>G</em>&nbsp;&ge;&nbsp;2 enter the training set.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End quality criteria -->
+
+    <!-- Example simplifications -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Example: Simplifying Verbose Invariants</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            The figures below show concrete
+            V<sub>0</sub>&nbsp;&rarr;&nbsp;V<sub>1</sub>&nbsp;&rarr;&nbsp;V<sub>2</sub>
+            transformations produced by Wonda. AST normalization removes syntactic noise; LLM simplification
+            rewrites verbose disjunctive forms into compact closed-form expressions that are easier to learn.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <div class="hero-body pt-0">
+        <div class="container is-max-desktop">
+          <div class="results-figures-carousel-wrapper">
+            <div id="examples-carousel" class="carousel results-carousel">
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_1240_1.png" alt="Wonda pipeline example 1240 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>1240_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes tautologies and constant
+                  preconditions, keeping only the GCD upper bounds (V<sub>2</sub>):
+                  <code>gcd &lt;= a &amp;&amp; gcd &lt;= b &amp;&amp; gcd &lt;= c</code>, a 26× character reduction with
+                  verified correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_1679_1.png" alt="Wonda pipeline example 1679 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>1679_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then generalizes bit-count case enumeration to
+                  compact numeric bounds (V<sub>2</sub>):
+                  <code>0 &lt;= count &amp;&amp; count &lt;= 8 &amp;&amp; 0 &lt;= n</code>, a 37× character reduction
+                  with verified correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_2079_1.png" alt="Wonda pipeline example 2079 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>2079_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then simplifies redundant modulo and
+                  strict-inequality encodings (V<sub>2</sub>): <code>lo * lo &lt;= N</code>, a 7× character reduction
+                  with verified correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_2148_1.png" alt="Wonda pipeline example 2148 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>2148_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then states the bitwise-accumulation closed
+                  form and drops redundant modulo constraints (V<sub>2</sub>): <code>T == (1LL &lt;&lt; i) - 1</code>, a
+                  298× character reduction with <strong>1.5×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_2383_1.png" alt="Wonda pipeline example 2383 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>2383_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then collapses repeated multiply-by-addition
+                  cases into a work-remaining identity (V<sub>2</sub>): <code>c + d * b == a * b</code>, a 724×
+                  character reduction with <strong>15.1×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_2456_3.png" alt="Wonda pipeline example 2456 3"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>2456_3.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then extracts the triangular-number closed form
+                  and keeps only necessary loop bounds (V<sub>2</sub>):
+                  <code>sum == i * (i - 1) / 2 &amp;&amp; i &lt;= n &amp;&amp; n &lt;= 100 &amp;&amp; 0 &lt;= i</code>,
+                  a 481× character reduction with <strong>5.1×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_2686_1.png" alt="Wonda pipeline example 2686 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>2686_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then replaces per-value case enumeration with a
+                  sum-of-squares closed form (V<sub>2</sub>):
+                  <code>b == 10 &amp;&amp; a &lt; 10 &amp;&amp; 6*(c+1) == a*(a+1)*(2*a+1)</code>, a 9× character
+                  reduction with verified correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_274_1.png" alt="Wonda pipeline example 274 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>274_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then captures the loop's fixed linear update
+                  law and a needed non-negativity bound (V<sub>2</sub>):
+                  <code>a + 2*b == 2*n &amp;&amp; 0 &lt;= b</code>, a 248× character reduction with
+                  <strong>12.5×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_2953_2.png" alt="Wonda pipeline example 2953 2"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>2953_2.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then generalizes enumerated accumulation steps
+                  to a single linear counter law (V<sub>2</sub>): <code>sum == (a - b) * i</code>, a 415× character
+                  reduction with <strong>7.2×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_3047_2.png" alt="Wonda pipeline example 3047 2"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>3047_2.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then strips constraints on loop-invariant
+                  constants and redundant case equalities (V<sub>2</sub>): <code>sum_b &gt;= 0</code>, a 26× character
+                  reduction with verified correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_3197_2.png" alt="Wonda pipeline example 3197 2"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>3197_2.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then discards contradictory disjuncts and
+                  captures the loop's stride structure (V<sub>2</sub>):
+                  <code>i % 6 == 5 &amp;&amp; i * i &lt;= n</code>, a 18× character reduction with verified correct &
+                  sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_3917_3.png" alt="Wonda pipeline example 3917 3"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>3917_3.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then compresses Russian-peasant-multiplication
+                  cases into one preserved product identity (V<sub>2</sub>):
+                  <code>z + x*y == a*b &amp;&amp; y &gt;= 0</code>, a 265× character reduction with
+                  <strong>2.8×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_4820_1.png" alt="Wonda pipeline example 4820 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>4820_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then tightens case-wise sum bounds to the
+                  linear inequality implied by each iteration (V<sub>2</sub>): <code>sum &lt;= 10 * count</code>, a 608×
+                  character reduction with <strong>28.8×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_4828_1.png" alt="Wonda pipeline example 4828 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>4828_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes inert conditional branches and
+                  states the combined accumulation in linear form (V<sub>2</sub>):
+                  <code>2*(x+y+z) == (a+b+c)*i*(i-1)</code>, a 132× character reduction with <strong>35.9×</strong>
+                  verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_4992_5.png" alt="Wonda pipeline example 4992 5"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>4992_5.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then keeps the essential B'ezout linear
+                  combinations with minor syntactic compaction (V<sub>2</sub>):
+                  <code>a*s+b*t==r&amp;&amp;a*old_s+b*old_t==old_r</code>, a 4× character reduction with verified
+                  correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_5066_1.png" alt="Wonda pipeline example 5066 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>5066_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then drops overfitted case constraints and
+                  keeps core loop-bound and sign facts (V<sub>2</sub>):
+                  <code>0 &lt;= i &amp;&amp; i &lt; n &amp;&amp; 0 &lt;= j &amp;&amp; j &lt; m &amp;&amp; sum &gt;= 0 &amp;&amp; product &gt;= 1</code>,
+                  a 133× character reduction with <strong>2.6×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_5582_1.png" alt="Wonda pipeline example 5582 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>5582_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes redundant constraints on the loop
+                  counter and keeps non-negativity of the sum (V<sub>2</sub>): <code>0 &lt;= sum</code>, a 7× character
+                  reduction with <strong>41.4×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_6098_1.png" alt="Wonda pipeline example 6098 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>6098_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then collapses tautological nested conditionals
+                  to the one fact needed for the assertion (V<sub>2</sub>): <code>N &gt; 0</code>, a 82× character
+                  reduction with <strong>1.2×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_6235_1.png" alt="Wonda pipeline example 6235 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>6235_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then reduces factorial case analysis to simple
+                  non-negativity (V<sub>2</sub>): <code>seq &gt;= 0</code>, a 18× character reduction with
+                  <strong>1.5×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_6732_1.png" alt="Wonda pipeline example 6732 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>6732_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then eliminates floor-division artifacts in
+                  favor of an exact polynomial sum-of-squares identity (V<sub>2</sub>):
+                  <code>6 * sum_of_squares == 2*i*i*i - 3*i*i + i</code>, a 43× character reduction with
+                  <strong>20.4×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_6858_1.png" alt="Wonda pipeline example 6858 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>6858_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then replaces 161 case-specific disjuncts with
+                  the linear accumulation law (V<sub>2</sub>): <code>sum == i * b</code>, a 1096× character reduction
+                  with <strong>30.2×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_7158_1.png" alt="Wonda pipeline example 7158 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>7158_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then unifies case-specific bounds into one
+                  preserved linear combination (V<sub>2</sub>):
+                  <code>x + result*y &lt;= 99 &amp;&amp; y &gt;= 1 &amp;&amp; x &gt; y</code>, a 351× character
+                  reduction with <strong>21.8×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_7241_1.png" alt="Wonda pipeline example 7241 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>7241_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes constant and parity constraints
+                  that are unnecessary for the target property (V<sub>2</sub>): <code>a * a &lt;= b</code>, a 31×
+                  character reduction with verified correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_7241_2.png" alt="Wonda pipeline example 7241 2"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>7241_2.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then merges parity-based case splits into a
+                  single linear inequality (V<sub>2</sub>): <code>a &gt;= 0 &amp;&amp; a * n &lt;= b</code>, a 65×
+                  character reduction with <strong>4.3×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_7321_1.png" alt="Wonda pipeline example 7321 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>7321_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then states the extended-Euclidean B'ezout
+                  linear equalities without redundant cases (V<sub>2</sub>):
+                  <code>A == A0 * x0 + B0 * y0 &amp;&amp; B == A0 * x1 + B0 * y1</code>, a 24× character reduction with
+                  <strong>26.1×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_7861_1.png" alt="Wonda pipeline example 7861 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>7861_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes size-specific overfitting and
+                  keeps valid binary-search index bounds (V<sub>2</sub>):
+                  <code>0 &lt;= left &amp;&amp; right &lt; size</code>, a 140× character reduction with
+                  <strong>5.3×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_8192_1.png" alt="Wonda pipeline example 8192 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>8192_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then applies Boolean absorption to drop a
+                  redundant disjunct (V<sub>2</sub>): <code>a &gt; 0</code>, a 7× character reduction with
+                  <strong>33.9×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_8353_1.png" alt="Wonda pipeline example 8353 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>8353_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then bounds the digit-sum loop using the input
+                  magnitude and non-negativity (V<sub>2</sub>): <code>0 &lt;= temp &amp;&amp; sum &lt;= 27</code>, a
+                  236× character reduction with <strong>1.2×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_8694_1.png" alt="Wonda pipeline example 8694 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>8694_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then recognizes the sum-of-odd-integers pattern
+                  and states the i^2 closed form (V<sub>2</sub>):
+                  <code>0 &lt;= i &amp;&amp; i &lt;= n &amp;&amp; sum == i*i</code>, a 413× character reduction with
+                  <strong>22.5×</strong> verification speedup.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_905_1.png" alt="Wonda pipeline example 905 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>905_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then drops redundant Fibonacci case bounds
+                  while keeping the needed growth limit (V<sub>2</sub>):
+                  <code>n &lt;= 30 &amp;&amp; fib0 + fib1 &lt;= 832040</code>, a 143× character reduction with verified
+                  correct & sufficient.
+                </p>
+              </div>
+              <div class="item">
+                <img src="static/images/png/pipeline_showcase_9136_1.png" alt="Wonda pipeline example 9136 1"
+                  loading="lazy" class="results-carousel-img results-carousel-img--table">
+                <p class="subtitle has-text-centered example-caption">
+                  <span class="small-caps">Wonda</span> pipeline on <code>9136_1.c</code>. The raw verifier output
+                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then replaces case enumeration with the linear
+                  relation between sum and the loop counter (V<sub>2</sub>): <code>sum == i * a</code>, a 370× character
+                  reduction with <strong>3.8×</strong> verification speedup.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+    </section>
+    <!-- End example simplifications -->
+
+    <!-- Main results -->
+    <section class="section hero is-small is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Main Results</h2>
+        <div class="results-block">
+          <img src="static/images/figures/main_results.png" alt="Table 3: main results on the hard instances (n = 123)"
+            loading="lazy" class="results-table-img">
+          <div class="results-highlights content">
+            <h3 class="title is-5">Highlights</h3>
+            <ul>
+              <li>Wonda V2 fine-tuning roughly doubles correctness and speedup rates for Qwen3-4B/8B.</li>
+              <li>Llama3.1-8B-V2 triples both vs.&nbsp;base.</li>
+              <li>Qwen3-14B-V2 matches GPT-5.2 on end-to-end VBP.</li>
+              <li>Qwen3-4B/8B-V2 match GPT-OSS-120B on end-to-end VBP despite lower correctness.</li>
+              <li>At 4B scale, Wonda nearly matches a model 20&times; larger with no test-time overhead.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+    </section>
+    <!-- End main results -->
+
+    <!-- WONDA Pipeline ablation -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">WONDA Pipeline Ablation</h2>
+        <div class="results-block">
+          <img src="static/images/figures/ablation.png" alt="Table 4: Wonda ablation study on the hard split"
+            loading="lazy" class="results-table-img">
+          <div class="results-highlights content">
+            <h3 class="title is-5">Highlights</h3>
+            <ul>
+              <li>V0: raw UAutomizer output &rarr; V1: AST normalization &rarr; V2: full Wonda pipeline.</li>
+              <li>Each stage helps, but V2 is best per model family. V0 can sometimes hurt performance for Mistral-7B
+                and Qwen3-0.6B.</li>
+              <li>Largest gains on correctness, speedup rate, and verification time across Qwen3, Llama3.1-8B, and
+                Mistral-7B.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End WONDA Pipeline ablation -->
 
 
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{pinto2026wonda,
+  title={Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs},
+  author={Pinto, Ido and Elboher, Yizhak Yisrael and Wu, Haoze and Narodytska, Nina and Katz, Guy},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2026},
+  url={https://arxiv.org/abs/2603.15510}
+}</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
 
+  </main>
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
+  <footer class="footer">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in
+              the footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </footer>
 
+  <!-- Statcounter tracking code -->
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
+  <!-- End of Statcounter Code -->
 
+</body>
 
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</html>
