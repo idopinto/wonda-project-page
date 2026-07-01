@@ -653,8 +653,181 @@
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Main Results</h2>
         <div class="results-block">
-          <img src="static/images/figures/main_results.png" alt="Table 3: main results on the hard instances (n = 123)"
-            loading="lazy" class="results-table-img">
+          <div class="results-table-wrapper">
+            <table class="results-table">
+              <caption>
+                <strong>Table 3.</strong> Main results on the Hard instances (<em>n</em> = 123). Results shown as mean
+                ± std. across three runs. <em>R</em><sub>valid/correct/speedup</sub>: indicator rates (%);
+                S&#x0304;<sub>&gt;1</sub>: mean speedup among accelerated instances;
+                <strong>VBP</strong>: Virtual Best Performance in seconds (verifier-only baseline VBP: 193s);
+                <strong>Solved</strong>: baseline timeouts (of 20) resolved per run. Bold indicates best per model scale.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col"><em>R</em><sub>valid</sub> (%)</th>
+                  <th scope="col"><em>R</em><sub>correct</sub> (%)</th>
+                  <th scope="col"><em>R</em><sub>speedup</sub> (%)</th>
+                  <th scope="col">S&#x0304;<sub>&gt;1</sub> (×)</th>
+                  <th scope="col">VBP ↓ (s)</th>
+                  <th scope="col">VBP<sub>E2E</sub> ↓ (s)</th>
+                  <th scope="col">Solved</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">GPT-5.2</th>
+                  <td>94.0 ± 1.7</td>
+                  <td>72.4 ± 2.2</td>
+                  <td>37.1 ± 1.2</td>
+                  <td>10.7 ± 0.4</td>
+                  <td>155.6 ± 3.0</td>
+                  <td>163.4 ± 3.0</td>
+                  <td>3, 2, 3</td>
+                </tr>
+                <tr>
+                  <th scope="row">GPT-OSS-120B</th>
+                  <td>92.1 ± 1.2</td>
+                  <td>58.0 ± 1.2</td>
+                  <td>27.4 ± 2.9</td>
+                  <td>7.0 ± 1.4</td>
+                  <td>165.8 ± 5.6</td>
+                  <td>167.6 ± 5.7</td>
+                  <td>3, 2, 1</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-80B</th>
+                  <td>97.8 ± 0.5</td>
+                  <td>38.8 ± 1.7</td>
+                  <td>21.4 ± 1.2</td>
+                  <td>9.5 ± 1.0</td>
+                  <td>169.5 ± 2.1</td>
+                  <td>169.7 ± 2.1</td>
+                  <td>4, 3, 3</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-14B</th>
+                  <td>96.5 ± 0.5</td>
+                  <td>36.3 ± 1.9</td>
+                  <td>13.6 ± 2.0</td>
+                  <td>7.6 ± 0.9</td>
+                  <td>183.2 ± 1.2</td>
+                  <td>183.6 ± 1.1</td>
+                  <td>1, 2, 1</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-14B-V2 (Ours)</th>
+                  <td class="best">100.0 ± 0.0</td>
+                  <td class="best">43.4 ± 4.9</td>
+                  <td class="best">18.4 ± 4.2</td>
+                  <td class="best">16.0 ± 3.3</td>
+                  <td class="best">162.1 ± 8.3</td>
+                  <td class="best">162.9 ± 8.1</td>
+                  <td class="best">4, 4, 2</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-8B (Base)</th>
+                  <td>89.4 ± 7.8</td>
+                  <td>23.8 ± 3.1</td>
+                  <td>10.8 ± 0.5</td>
+                  <td>8.5 ± 5.2</td>
+                  <td>181.6 ± 4.3</td>
+                  <td>181.7 ± 4.2</td>
+                  <td>0, 0, 3</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-8B-V2 (Ours)</th>
+                  <td class="best">100.0 ± 0.0</td>
+                  <td class="best">42.8 ± 4.6</td>
+                  <td class="best">21.7 ± 1.7</td>
+                  <td class="best">10.7 ± 2.3</td>
+                  <td class="best">166.5 ± 4.3</td>
+                  <td class="best">166.7 ± 4.3</td>
+                  <td class="best">2, 1, 4</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-4B (Base)</th>
+                  <td>99.2 ± 0.0</td>
+                  <td>22.8 ± 2.2</td>
+                  <td>11.1 ± 0.9</td>
+                  <td>8.9 ± 2.5</td>
+                  <td>185.6 ± 2.4</td>
+                  <td>185.7 ± 2.4</td>
+                  <td>1, 0, 1</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-4B-V2 (Ours)</th>
+                  <td class="best">100.0 ± 0.0</td>
+                  <td class="best">44.4 ± 2.3</td>
+                  <td class="best">24.7 ± 1.2</td>
+                  <td class="best">12.4 ± 2.2</td>
+                  <td class="best">165.5 ± 3.2</td>
+                  <td class="best">165.7 ± 3.2</td>
+                  <td class="best">3, 2, 2</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-0.6B (Base)</th>
+                  <td>88.3 ± 0.5</td>
+                  <td class="best">28.5 ± 2.8</td>
+                  <td>12.2 ± 2.2</td>
+                  <td>5.3 ± 3.3</td>
+                  <td>182.9 ± 5.7</td>
+                  <td>183.0 ± 5.7</td>
+                  <td>2, 0, 1</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-0.6B-V2 (Ours)</th>
+                  <td class="best">99.7 ± 0.5</td>
+                  <td>27.9 ± 0.5</td>
+                  <td class="best">14.1 ± 2.5</td>
+                  <td class="best">8.5 ± 3.1</td>
+                  <td class="best">174.0 ± 5.6</td>
+                  <td class="best">174.1 ± 5.6</td>
+                  <td class="best">2, 2, 1</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Llama3.1-8B (Base)</th>
+                  <td>96.2 ± 1.2</td>
+                  <td>14.9 ± 1.7</td>
+                  <td>5.4 ± 2.0</td>
+                  <td>3.7 ± 1.4</td>
+                  <td>186.3 ± 5.1</td>
+                  <td>186.4 ± 5.1</td>
+                  <td>1, 0, 2</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Llama3.1-8B-V2 (Ours)</th>
+                  <td class="best">99.7 ± 0.5</td>
+                  <td class="best">45.5 ± 1.4</td>
+                  <td class="best">18.4 ± 2.5</td>
+                  <td class="best">11.3 ± 2.1</td>
+                  <td class="best">168.9 ± 7.6</td>
+                  <td class="best">169.2 ± 7.5</td>
+                  <td class="best">3, 2, 4</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Mistral-7B (Base)</th>
+                  <td>93.8 ± 0.9</td>
+                  <td>18.4 ± 2.0</td>
+                  <td>7.3 ± 1.4</td>
+                  <td>6.7 ± 3.6</td>
+                  <td>186.7 ± 1.5</td>
+                  <td>186.9 ± 1.5</td>
+                  <td>0, 0, 0</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Mistral-7B-V2 (Ours)</th>
+                  <td class="best">99.5 ± 0.9</td>
+                  <td class="best">31.4 ± 0.5</td>
+                  <td class="best">16.0 ± 0.5</td>
+                  <td class="best">17.0 ± 0.9</td>
+                  <td class="best">169.0 ± 4.3</td>
+                  <td class="best">169.4 ± 4.3</td>
+                  <td class="best">2, 1, 4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div class="results-highlights content">
             <h3 class="title is-5">Highlights</h3>
             <ul>
@@ -675,8 +848,208 @@
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">WONDA Pipeline Ablation</h2>
         <div class="results-block">
-          <img src="static/images/figures/ablation.png" alt="Table 4: Wonda ablation study on the hard split"
-            loading="lazy" class="results-table-img">
+          <div class="results-table-wrapper">
+            <table class="results-table">
+              <caption>
+                <strong>Table 4.</strong> WONDA ablation study on the hard split (<em>n</em> = 123; mean ± std. over
+                three runs). V<sub>0</sub>: raw UAutomizer invariants; V<sub>1</sub>: AST-normalized; V<sub>2</sub>:
+                full pipeline. Bold indicates best per model family.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col"><em>R</em><sub>valid</sub> (%)</th>
+                  <th scope="col"><em>R</em><sub>correct</sub> (%)</th>
+                  <th scope="col"><em>R</em><sub>speedup</sub> (%)</th>
+                  <th scope="col">S&#x0304;<sub>&gt;1</sub> (×)</th>
+                  <th scope="col">VBP ↓ (s)</th>
+                  <th scope="col">VBP<sub>E2E</sub> ↓ (s)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-8B (Base)</th>
+                  <td>89.4 ± 7.8</td>
+                  <td>23.8 ± 3.1</td>
+                  <td>10.8 ± 0.5</td>
+                  <td>8.5 ± 5.2</td>
+                  <td>181.6 ± 4.3</td>
+                  <td>181.7 ± 4.2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-8B-V0</th>
+                  <td>88.1 ± 3.9</td>
+                  <td>29.9 ± 3.4</td>
+                  <td>11.5 ± 1.9</td>
+                  <td>9.4 ± 2.6</td>
+                  <td>180.0 ± 2.7</td>
+                  <td>180.6 ± 2.7</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-8B-V1</th>
+                  <td>97.0 ± 0.9</td>
+                  <td>30.1 ± 0.8</td>
+                  <td>13.0 ± 2.2</td>
+                  <td>9.1 ± 1.9</td>
+                  <td>175.3 ± 3.2</td>
+                  <td>175.5 ± 3.2</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-8B-V2 (Ours)</th>
+                  <td class="best">100.0 ± 0.0</td>
+                  <td class="best">42.8 ± 4.6</td>
+                  <td class="best">21.7 ± 1.7</td>
+                  <td class="best">10.7 ± 2.3</td>
+                  <td class="best">166.5 ± 4.3</td>
+                  <td class="best">166.7 ± 4.3</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-4B (Base)</th>
+                  <td>99.2 ± 0.0</td>
+                  <td>22.8 ± 2.2</td>
+                  <td>11.1 ± 0.9</td>
+                  <td>8.9 ± 2.5</td>
+                  <td>185.6 ± 2.4</td>
+                  <td>185.7 ± 2.4</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-4B-V0</th>
+                  <td>81.3 ± 0.8</td>
+                  <td>29.3 ± 3.5</td>
+                  <td>13.6 ± 1.9</td>
+                  <td>10.1 ± 1.5</td>
+                  <td>177.5 ± 1.5</td>
+                  <td>177.7 ± 1.5</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-4B-V1</th>
+                  <td>97.6 ± 1.4</td>
+                  <td>33.1 ± 2.3</td>
+                  <td>12.7 ± 2.3</td>
+                  <td>11.4 ± 2.9</td>
+                  <td>174.2 ± 4.7</td>
+                  <td>174.4 ± 4.7</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-4B-V2 (Ours)</th>
+                  <td class="best">100.0 ± 0.0</td>
+                  <td class="best">44.4 ± 2.3</td>
+                  <td class="best">24.7 ± 1.2</td>
+                  <td class="best">12.4 ± 2.2</td>
+                  <td class="best">165.5 ± 3.2</td>
+                  <td class="best">165.7 ± 3.2</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Qwen3-0.6B (Base)</th>
+                  <td>88.3 ± 0.5</td>
+                  <td class="best">28.5 ± 2.8</td>
+                  <td>12.2 ± 2.2</td>
+                  <td>5.3 ± 3.3</td>
+                  <td>182.9 ± 5.7</td>
+                  <td>183.0 ± 5.7</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-0.6B-V0</th>
+                  <td>85.9 ± 2.6</td>
+                  <td>18.7 ± 0.8</td>
+                  <td>8.9 ± 0.8</td>
+                  <td>11.7 ± 9.4</td>
+                  <td>178.0 ± 2.7</td>
+                  <td>178.1 ± 2.7</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-0.6B-V1</th>
+                  <td>97.6 ± 1.4</td>
+                  <td>23.3 ± 1.2</td>
+                  <td>9.8 ± 2.2</td>
+                  <td class="best">15.3 ± 0.9</td>
+                  <td>174.4 ± 4.4</td>
+                  <td>174.5 ± 4.4</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Qwen3-0.6B-V2 (Ours)</th>
+                  <td class="best">99.7 ± 0.5</td>
+                  <td>27.9 ± 0.5</td>
+                  <td class="best">14.1 ± 2.5</td>
+                  <td>8.5 ± 3.1</td>
+                  <td class="best">174.0 ± 5.6</td>
+                  <td class="best">174.1 ± 5.6</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Llama3.1-8B (Base)</th>
+                  <td>96.2 ± 1.2</td>
+                  <td>14.9 ± 1.7</td>
+                  <td>5.4 ± 2.0</td>
+                  <td>3.7 ± 1.4</td>
+                  <td>186.3 ± 5.1</td>
+                  <td>186.4 ± 5.1</td>
+                </tr>
+                <tr>
+                  <th scope="row">Llama3.1-8B-V0</th>
+                  <td>88.9 ± 0.5</td>
+                  <td>31.2 ± 2.0</td>
+                  <td>14.9 ± 0.9</td>
+                  <td>9.3 ± 3.1</td>
+                  <td>175.0 ± 2.5</td>
+                  <td>175.4 ± 2.5</td>
+                </tr>
+                <tr>
+                  <th scope="row">Llama3.1-8B-V1</th>
+                  <td>99.7 ± 0.5</td>
+                  <td>36.3 ± 5.4</td>
+                  <td>14.1 ± 3.7</td>
+                  <td class="best">15.3 ± 3.4</td>
+                  <td>170.0 ± 3.5</td>
+                  <td>170.4 ± 3.5</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Llama3.1-8B-V2 (Ours)</th>
+                  <td class="best">99.7 ± 0.5</td>
+                  <td class="best">45.5 ± 1.4</td>
+                  <td class="best">18.4 ± 2.5</td>
+                  <td>11.3 ± 2.1</td>
+                  <td class="best">168.9 ± 7.6</td>
+                  <td class="best">169.2 ± 7.5</td>
+                </tr>
+                <tr class="group-start">
+                  <th scope="row">Mistral-7B (Base)</th>
+                  <td>93.8 ± 0.9</td>
+                  <td>18.4 ± 2.0</td>
+                  <td>7.3 ± 1.4</td>
+                  <td>6.7 ± 3.6</td>
+                  <td>186.7 ± 1.5</td>
+                  <td>186.9 ± 1.5</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mistral-7B-V0</th>
+                  <td>68.8 ± 2.0</td>
+                  <td>17.1 ± 4.3</td>
+                  <td>6.5 ± 2.8</td>
+                  <td>16.8 ± 2.3</td>
+                  <td>179.1 ± 7.7</td>
+                  <td>179.4 ± 7.7</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mistral-7B-V1</th>
+                  <td>95.9 ± 1.6</td>
+                  <td>24.9 ± 0.9</td>
+                  <td>10.0 ± 3.8</td>
+                  <td>14.3 ± 2.8</td>
+                  <td>175.4 ± 6.4</td>
+                  <td>175.9 ± 6.2</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">Mistral-7B-V2 (Ours)</th>
+                  <td class="best">99.5 ± 0.9</td>
+                  <td class="best">31.4 ± 0.5</td>
+                  <td class="best">16.0 ± 0.5</td>
+                  <td class="best">17.0 ± 0.9</td>
+                  <td class="best">169.0 ± 4.3</td>
+                  <td class="best">169.4 ± 4.3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div class="results-highlights content">
             <h3 class="title is-5">Highlights</h3>
             <ul>
