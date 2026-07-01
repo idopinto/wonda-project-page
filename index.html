@@ -503,16 +503,6 @@
                 </p>
               </div>
               <div class="item">
-                <img src="static/images/png/pipeline_showcase_4820_1.png" alt="Wonda pipeline example 4820 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>4820_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then tightens case-wise sum bounds to the
-                  linear inequality implied by each iteration (V<sub>2</sub>): <code>sum &lt;= 10 * count</code>, a 608×
-                  character reduction with <strong>28.8×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
                 <img src="static/images/png/pipeline_showcase_4828_1.png" alt="Wonda pipeline example 4828 1"
                   loading="lazy" class="results-carousel-img results-carousel-img--table">
                 <p class="subtitle has-text-centered example-caption">
@@ -543,16 +533,6 @@
                   keeps core loop-bound and sign facts (V<sub>2</sub>):
                   <code>0 &lt;= i &amp;&amp; i &lt; n &amp;&amp; 0 &lt;= j &amp;&amp; j &lt; m &amp;&amp; sum &gt;= 0 &amp;&amp; product &gt;= 1</code>,
                   a 133× character reduction with <strong>2.6×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_6235_1.png" alt="Wonda pipeline example 6235 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>6235_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then reduces factorial case analysis to simple
-                  non-negativity (V<sub>2</sub>): <code>seq &gt;= 0</code>, a 18× character reduction with
-                  <strong>1.5×</strong> verification speedup.
                 </p>
               </div>
               <div class="item">
@@ -659,16 +639,6 @@
                   while keeping the needed growth limit (V<sub>2</sub>):
                   <code>n &lt;= 30 &amp;&amp; fib0 + fib1 &lt;= 832040</code>, a 143× character reduction with verified
                   correct & sufficient.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_9136_1.png" alt="Wonda pipeline example 9136 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>9136_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then replaces case enumeration with the linear
-                  relation between sum and the loop counter (V<sub>2</sub>): <code>sum == i * a</code>, a 370× character
-                  reduction with <strong>3.8×</strong> verification speedup.
                 </p>
               </div>
             </div>
