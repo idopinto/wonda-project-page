@@ -429,16 +429,6 @@
           <div class="results-figures-carousel-wrapper">
             <div id="examples-carousel" class="carousel results-carousel">
               <div class="item">
-                <img src="static/images/png/pipeline_showcase_2148_1.png" alt="Wonda pipeline example 2148 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>2148_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then states the bitwise-accumulation closed
-                  form and drops redundant modulo constraints (V<sub>2</sub>): <code>T == (1LL &lt;&lt; i) - 1</code>, a
-                  298× character reduction with <strong>1.5×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
                 <img src="static/images/png/pipeline_showcase_2383_1.png" alt="Wonda pipeline example 2383 1"
                   loading="lazy" class="results-carousel-img results-carousel-img--table">
                 <p class="subtitle has-text-centered example-caption">
@@ -511,17 +501,6 @@
                   states the combined accumulation in linear form (V<sub>2</sub>):
                   <code>2*(x+y+z) == (a+b+c)*i*(i-1)</code>, a 132× character reduction with <strong>35.9×</strong>
                   verification speedup.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_4992_5.png" alt="Wonda pipeline example 4992 5"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>4992_5.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then keeps the essential B'ezout linear
-                  combinations with minor syntactic compaction (V<sub>2</sub>):
-                  <code>a*s+b*t==r&amp;&amp;a*old_s+b*old_t==old_r</code>, a 4× character reduction with verified
-                  correct & sufficient.
                 </p>
               </div>
               <div class="item">
@@ -628,17 +607,6 @@
                   and states the i^2 closed form (V<sub>2</sub>):
                   <code>0 &lt;= i &amp;&amp; i &lt;= n &amp;&amp; sum == i*i</code>, a 413× character reduction with
                   <strong>22.5×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_905_1.png" alt="Wonda pipeline example 905 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>905_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then drops redundant Fibonacci case bounds
-                  while keeping the needed growth limit (V<sub>2</sub>):
-                  <code>n &lt;= 30 &amp;&amp; fib0 + fib1 &lt;= 832040</code>, a 143× character reduction with verified
-                  correct & sufficient.
                 </p>
               </div>
             </div>
@@ -1053,11 +1021,15 @@
           <div class="results-highlights content">
             <h3 class="title is-5">Highlights</h3>
             <ul>
-              <li>V0: raw UAutomizer output &rarr; V1: AST normalization &rarr; V2: full Wonda pipeline.</li>
-              <li>Each stage helps, but V2 is best per model family. V0 can sometimes hurt performance for Mistral-7B
-                and Qwen3-0.6B.</li>
-              <li>Largest gains on correctness, speedup rate, and verification time across Qwen3, Llama3.1-8B, and
-                Mistral-7B.</li>
+              <li>V<sub>0</sub> &rarr; V<sub>1</sub> &rarr; V<sub>2</sub> traces raw UAutomizer output, AST normalization,
+                and the full WONDA pipeline on Qwen3-4B/8B, Llama-3.1-8B, and Mistral-7B.</li>
+              <li>V<sub>0</sub> fine-tuning often lowers <em>R</em><sub>valid</sub> (e.g., Qwen3-4B and Mistral-7B).</li>
+              <li>V<sub>1</sub> restores syntactic validity but yields only modest gains over base.</li>
+              <li>V<sub>2</sub> nearly doubles correctness and speedup rates on Qwen3-4B/8B; Llama-3.1-8B-V2 reaches
+                the highest <em>R</em><sub>correct</sub> in the table (45.5%), and Mistral-7B recovers from the
+                V<sub>0</sub> drop.</li>
+              <li>Only the full WONDA pipeline consistently delivers both syntactic reliability and meaningful
+                verification speedup.</li>
             </ul>
           </div>
         </div>
