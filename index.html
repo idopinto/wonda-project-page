@@ -76,6 +76,13 @@
   <title>Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs | Ido Pinto,
     Yizhak Yisrael Elboher, Haoze Wu, Nina Narodytska, Guy Katz</title>
 
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="static/images/favicon/site.webmanifest">
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -178,7 +185,7 @@
     "@type": "Organization",
     "name": "Katz Lab, Hebrew University of Jerusalem",
     "url": "https://www.katz-lab.com/",
-    "logo": "https://idopinto.github.io/wonda-project-page/static/images/figures/figure_5.png",
+    "logo": "https://idopinto.github.io/wonda-project-page/static/images/favicon/android-chrome-512x512.png",
     "sameAs": [
       "https://github.com/idopinto/wonda"
     ]
@@ -291,12 +298,11 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <h2 class="title is-3 has-text-centered pipeline-algorithms-title">Wonda Data Curation Pipeline</h2>
+          <h2 class="title is-3 has-text-centered pipeline-algorithms-title">Wonda Pipeline</h2>
           <p class="subtitle has-text-centered pipeline-algorithms-intro">
             We introduce <strong>Wonda</strong>, a rigorous data curation pipeline that transforms raw verifier output
             into high-quality training invariants for loop invariant generation task through AST normalization,
-            LLM-driven simplification, and formal
-            quality grading.
+            LLM-driven simplification, and formal quality grading.
           </p>
           <figure class="publication-figure-centered pipeline-poster">
             <img src="static/images/verifier_pipeline_poster.png"
@@ -423,38 +429,6 @@
           <div class="results-figures-carousel-wrapper">
             <div id="examples-carousel" class="carousel results-carousel">
               <div class="item">
-                <img src="static/images/png/pipeline_showcase_1240_1.png" alt="Wonda pipeline example 1240 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>1240_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes tautologies and constant
-                  preconditions, keeping only the GCD upper bounds (V<sub>2</sub>):
-                  <code>gcd &lt;= a &amp;&amp; gcd &lt;= b &amp;&amp; gcd &lt;= c</code>, a 26× character reduction with
-                  verified correct & sufficient.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_1679_1.png" alt="Wonda pipeline example 1679 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>1679_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then generalizes bit-count case enumeration to
-                  compact numeric bounds (V<sub>2</sub>):
-                  <code>0 &lt;= count &amp;&amp; count &lt;= 8 &amp;&amp; 0 &lt;= n</code>, a 37× character reduction
-                  with verified correct & sufficient.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_2079_1.png" alt="Wonda pipeline example 2079 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>2079_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then simplifies redundant modulo and
-                  strict-inequality encodings (V<sub>2</sub>): <code>lo * lo &lt;= N</code>, a 7× character reduction
-                  with verified correct & sufficient.
-                </p>
-              </div>
-              <div class="item">
                 <img src="static/images/png/pipeline_showcase_2148_1.png" alt="Wonda pipeline example 2148 1"
                   loading="lazy" class="results-carousel-img results-carousel-img--table">
                 <p class="subtitle has-text-centered example-caption">
@@ -518,27 +492,6 @@
                 </p>
               </div>
               <div class="item">
-                <img src="static/images/png/pipeline_showcase_3047_2.png" alt="Wonda pipeline example 3047 2"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>3047_2.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then strips constraints on loop-invariant
-                  constants and redundant case equalities (V<sub>2</sub>): <code>sum_b &gt;= 0</code>, a 26× character
-                  reduction with verified correct & sufficient.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_3197_2.png" alt="Wonda pipeline example 3197 2"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>3197_2.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then discards contradictory disjuncts and
-                  captures the loop's stride structure (V<sub>2</sub>):
-                  <code>i % 6 == 5 &amp;&amp; i * i &lt;= n</code>, a 18× character reduction with verified correct &
-                  sufficient.
-                </p>
-              </div>
-              <div class="item">
                 <img src="static/images/png/pipeline_showcase_3917_3.png" alt="Wonda pipeline example 3917 3"
                   loading="lazy" class="results-carousel-img results-carousel-img--table">
                 <p class="subtitle has-text-centered example-caption">
@@ -590,26 +543,6 @@
                   keeps core loop-bound and sign facts (V<sub>2</sub>):
                   <code>0 &lt;= i &amp;&amp; i &lt; n &amp;&amp; 0 &lt;= j &amp;&amp; j &lt; m &amp;&amp; sum &gt;= 0 &amp;&amp; product &gt;= 1</code>,
                   a 133× character reduction with <strong>2.6×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_5582_1.png" alt="Wonda pipeline example 5582 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>5582_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then removes redundant constraints on the loop
-                  counter and keeps non-negativity of the sum (V<sub>2</sub>): <code>0 &lt;= sum</code>, a 7× character
-                  reduction with <strong>41.4×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_6098_1.png" alt="Wonda pipeline example 6098 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>6098_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then collapses tautological nested conditionals
-                  to the one fact needed for the assertion (V<sub>2</sub>): <code>N &gt; 0</code>, a 82× character
-                  reduction with <strong>1.2×</strong> verification speedup.
                 </p>
               </div>
               <div class="item">
@@ -694,16 +627,6 @@
                   keeps valid binary-search index bounds (V<sub>2</sub>):
                   <code>0 &lt;= left &amp;&amp; right &lt; size</code>, a 140× character reduction with
                   <strong>5.3×</strong> verification speedup.
-                </p>
-              </div>
-              <div class="item">
-                <img src="static/images/png/pipeline_showcase_8192_1.png" alt="Wonda pipeline example 8192 1"
-                  loading="lazy" class="results-carousel-img results-carousel-img--table">
-                <p class="subtitle has-text-centered example-caption">
-                  <span class="small-caps">Wonda</span> pipeline on <code>8192_1.c</code>. The raw verifier output
-                  (V<sub>0</sub>) is normalized (V<sub>1</sub>); the LLM then applies Boolean absorption to drop a
-                  redundant disjunct (V<sub>2</sub>): <code>a &gt; 0</code>, a 7× character reduction with
-                  <strong>33.9×</strong> verification speedup.
                 </p>
               </div>
               <div class="item">
