@@ -158,7 +158,7 @@
     "image": "https://idopinto.github.io/wonda-project-page/static/images/figures/figure_5.png",
     "keywords": ["program verification", "loop invariants", "small language models", "fine-tuning", "Wonda"],
     "abstract": "The synthesis of inductive loop invariants remains a critical bottleneck in automated program verification. While Large Language Models (LLMs) show promise in mitigating this issue, they often fail on complex programs, producing invariants that are invalid or computationally ineffective. Although fine-tuning is a natural strategy to address these limitations, obtaining high-quality training data remains an open challenge. We first formalize the properties required for a high-quality training invariant, and then present Wonda, a rigorous data curation pipeline that extracts such invariants from raw verifier output via AST-based normalization followed by LLM-driven semantic rewriting and augmentation with provable quality guarantees. Fine-tuning Small Language Models (SLMs) on Wonda-curated data yields consistent gains across the Qwen3, Llama-3.1, and Mistral families: the 4B and 8B Qwen3 models nearly double invariant correctness and double speedup rates, while Llama-3.1-8B triples both. On the challenging InvBench suite, the same 4B model outperforms an off-the-shelf model 20× its size and matches the end-to-end verification time of GPT-OSS-120B, while a 14B Qwen3 model matches that of the frontier model GPT-5.2, all without test-time compute overhead.",
-    "citation": "@article{pinto2026wonda, title={Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs}, author={Pinto, Ido and Elboher, Yizhak Yisrael and Wu, Haoze and Narodytska, Nina and Katz, Guy}, journal={arXiv preprint arXiv:2603.15510}, year={2026}, note={Accepted to ICML 2026}}",
+    "citation": "@inproceedings{pinto2026not, title={Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with {SLM}s}, author={Ido Pinto and Yizhak Yisrael Elboher and Haoze Wu and Nina Narodytska and Guy Katz}, booktitle={Forty-third International Conference on Machine Learning}, year={2026}, url={https://openreview.net/forum?id=fS28SOioQd}}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -834,8 +834,8 @@
               <li>Wonda V2 fine-tuning roughly doubles correctness and speedup rates for Qwen3-4B/8B.</li>
               <li>Llama3.1-8B-V2 triples both vs.&nbsp;base.</li>
               <li>Qwen3-14B-V2 matches GPT-5.2 on end-to-end VBP.</li>
-              <li>Qwen3-4B/8B-V2 match GPT-OSS-120B on end-to-end VBP despite lower correctness.</li>
-              <li>At 4B scale, Wonda nearly matches a model 20&times; larger with no test-time overhead.</li>
+              <li>Qwen3-4B/8B-V2 match GPT-OSS-120B on end-to-end VBP.</li>
+              <li>Qwen3-4B-V2 outperforms a model 20&times; its size and matches GPT-OSS-120B on VBP<sub>E2E</sub>.</li>
             </ul>
           </div>
         </div>
@@ -1076,12 +1076,12 @@
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <pre id="bibtex-code"><code>@article{pinto2026wonda,
-  title={Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs},
-  author={Pinto, Ido and Elboher, Yizhak Yisrael and Wu, Haoze and Narodytska, Nina and Katz, Guy},
-  journal={arXiv preprint arXiv:2603.15510},
+        <pre id="bibtex-code"><code>@inproceedings{pinto2026not,
+  title={Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with {SLM}s},
+  author={Ido Pinto and Yizhak Yisrael Elboher and Haoze Wu and Nina Narodytska and Guy Katz},
+  booktitle={Forty-third International Conference on Machine Learning},
   year={2026},
-  note={Accepted to ICML 2026}
+  url={https://openreview.net/forum?id=fS28SOioQd}
 }</code></pre>
       </div>
     </section>
